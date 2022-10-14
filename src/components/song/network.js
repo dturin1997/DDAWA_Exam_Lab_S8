@@ -6,5 +6,6 @@ const songRouter = Router();
 
 songRouter.route("/").get(authentication, Controller.findAll);
 songRouter.route("/").post(authentication, Controller.create);
+songRouter.route("/:id").get(authentication, Controller.findOne);
 
 export default songRouter;
