@@ -45,7 +45,6 @@ export const create = async (req, res) => {
  }
  };
  
-
 export const playListById = async (req,res) => {
     try {
         const { id } = req.params;
@@ -54,6 +53,7 @@ export const playListById = async (req,res) => {
         console.log(playlist)
         console.log(playlist.songs.toString())
         console.log(typeof(playlist.songs.toString()))
+
 
         const song = await Song.findById(playlist.songs.toString())
         delete playlist.songs
@@ -68,3 +68,4 @@ export const playListById = async (req,res) => {
         })
     }
  }
+
