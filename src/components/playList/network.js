@@ -1,9 +1,10 @@
 import { Router } from "express";
 import * as Controller from "./controller";
+import authentication from "../../middlewares/authentication"
 
-const testRouter = Router();
+const playListRouter = Router();
 
-testRouter.route("/").get(Controller.findAll);
-testRouter.route("/").post(Controller.create);
+playListRouter.route("/").get(authentication,Controller.findAll);
+playListRouter.route("/").post(authentication,Controller.create);
 
-export default testRouter;
+export default playListRouter;
