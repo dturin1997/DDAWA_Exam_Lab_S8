@@ -50,4 +50,4 @@ export const findOne = async (req, res) => {
           data: error.message,
         });
       }
-}
+};
