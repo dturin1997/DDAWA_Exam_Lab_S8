@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
- 
+
 const connect = () => {
  mongoose.Promise = global.Promise;
- mongoose.connect("mongodb://root:root@localhost:27017/lab-s8?authSource=admin",
+ mongoose.connect(
+   "mongodb://root:root@localhost:27017/lab-s8?authSource=admin",
    {
      useNewUrlParser: true,
      useUnifiedTopology: true,
